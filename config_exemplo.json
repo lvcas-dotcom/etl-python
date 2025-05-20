@@ -1,0 +1,29 @@
+{
+    "source_db": {
+        "type": "sqlite",
+        "connection_params": {
+            "database": "origem.db"
+        }
+    },
+    "target_db": {
+        "type": "sqlite",
+        "connection_params": {
+            "database": "destino.db"
+        }
+    },
+    "extraction": {
+        "query": "SELECT id, nome, email, idade FROM clientes WHERE idade > 30"
+    },
+    "loading": {
+        "target_table": "clientes_filtrados",
+        "create_table": true,
+        "column_definitions": {
+            "id": "INTEGER PRIMARY KEY",
+            "nome": "TEXT NOT NULL",
+            "email": "TEXT",
+            "idade": "INTEGER"
+        },
+        "truncate_before_load": true,
+        "batch_size": 100
+    }
+}

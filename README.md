@@ -1,4 +1,4 @@
-# ETL Python - Projeto feito para realização de integrações GEOGRAFICAS
+# ETL Python - Feito para realização de integrações GEOGRAFICAS
 
 Este projeto implementa um ETL (Extract, Transform, Load) em Python que permite extrair dados de uma base de dados e inseri-los noutra de forma simples e intuitiva.
 
